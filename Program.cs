@@ -46,6 +46,10 @@ namespace UserRegistrationForm
             Console.WriteLine("Enter your Phone Number : ");
             string takePhoneNumber = Console.ReadLine();
             patterns.PhoneNoCheck(takePhoneNumber);
+            ///To take password
+            Console.WriteLine("Enter your Password : ");
+            string takePassword = Console.ReadLine();
+            patterns.PasswordCheck(takePassword);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -59,6 +60,23 @@ namespace UserRegistrationForm
             else
             {
                 Console.WriteLine("Invalid");
+            }
+        }
+        /// <summary>
+        /// Chceks the password.
+        /// </summary>
+        /// <param name="password">The password.</param>
+        public void PasswordCheck(string password) 
+        {
+            var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
+            ///To validate the password with all the conditions.
+            if (password.Length >= 8 && password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsDigit) && hasSymbols.IsMatch(password)) 
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password");
             }
         }
     }
