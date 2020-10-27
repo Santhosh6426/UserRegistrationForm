@@ -27,5 +27,23 @@ namespace UserRegistrationForm
                 Console.WriteLine("Invalid");
             }
         }
+        public static string eMailPattern = "^[a-z]+([._+-][0-9a-z]+)*@[0-9a-zA-Z]+.[a-z]{2,4}([.][a-z]{2})$";
+        /// <summary>
+        /// Validates the email.
+        /// </summary>
+        /// <param name="eMail">The e mail.</param>
+        public void EmailCheck(string eMail)
+        {
+            ///validates First name and prints valid or invalid.
+            if (Regex.IsMatch(eMail, eMailPattern ))
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+        }
+
     }
 }
