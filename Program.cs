@@ -30,9 +30,15 @@ namespace UserRegistrationForm
         {
             Console.WriteLine("User Registration Form!");
             Console.WriteLine("Enter your First Name : ");
+            ///Takes First Name
             string takeFirstName=Console.ReadLine();
             Patterns patterns = new Patterns();
             patterns.FirstNameCheck(takeFirstName);
+            Console.WriteLine("Enter your Last Name : ");
+            ///takes Last Name
+            string takeLastName = Console.ReadLine();
+            ///making use of same method of first name.
+            patterns.FirstNameCheck(takeLastName);
         }
     }
 }
