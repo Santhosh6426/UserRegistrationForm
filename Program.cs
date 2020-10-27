@@ -42,6 +42,10 @@ namespace UserRegistrationForm
             Console.WriteLine("Enter your Email Id : ");
             string takeEmail = Console.ReadLine();
             patterns.EmailCheck(takeEmail);
+            ///To check for the Phone number.
+            Console.WriteLine("Enter your Phone Number : ");
+            string takePhoneNumber = Console.ReadLine();
+            patterns.PhoneNoCheck(takePhoneNumber);
         }
     }
 }

@@ -44,6 +44,22 @@ namespace UserRegistrationForm
                 Console.WriteLine("Invalid");
             }
         }
-
+        public static string phoneNoPattern = "^(9?1?)[:space:]?[0-9]{10}$";
+        /// <summary>
+        /// Validates the phone number.
+        /// </summary>
+        /// <param name="phoneNum">The phone number.</param>
+        public void PhoneNoCheck(string phoneNum)
+        {
+            ///validates First name and prints valid or invalid.
+            if (Regex.IsMatch(phoneNum, phoneNoPattern))
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+        }
     }
 }
