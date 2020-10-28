@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistrationForm
 {
-    class Patterns
+    public class Patterns
     {
         /// <summary>
         /// The first name pattern to validate
@@ -16,16 +16,16 @@ namespace UserRegistrationForm
         /// Firsts the name check.
         /// </summary>
         /// <param name="firstName">The first name.</param>
-        public void FirstNameCheck(string firstName) 
+        public string NameCheck(string firstName) 
         {
             ///validates First name and prints valid or invalid.
             if (Regex.IsMatch(firstName, firstNamePattern)) 
             {
-                Console.WriteLine( "Valid");
+                return "valid";
             }
             else
             {
-                Console.WriteLine("Invalid");
+                return "invalid!";
             }
         }
         public static string eMailPattern = "^[a-z]+([._+-][0-9a-z]+)*@[0-9a-zA-Z]+.[a-z]{2,4}([.][a-z]{2})$";
@@ -33,16 +33,16 @@ namespace UserRegistrationForm
         /// Validates the email.
         /// </summary>
         /// <param name="eMail">The e mail.</param>
-        public void EmailCheck(string eMail)
+        public string EmailCheck(string eMail)
         {
             ///validates First name and prints valid or invalid.
             if (Regex.IsMatch(eMail, eMailPattern ))
             {
-                Console.WriteLine("Valid");
+                return "valid";
             }
             else
             {
-                Console.WriteLine("Invalid");
+                return "invalid!";
             }
         }
         public static string phoneNoPattern = "^(9?1?)[:space:]?[0-9]{10}$";
@@ -50,33 +50,33 @@ namespace UserRegistrationForm
         /// Validates the phone number.
         /// </summary>
         /// <param name="phoneNum">The phone number.</param>
-        public void PhoneNoCheck(string phoneNum)
+        public string PhoneNoCheck(string phoneNum)
         {
             ///validates First name and prints valid or invalid.
-            if (Regex.IsMatch(phoneNum, phoneNoPattern))
+            if(Regex.IsMatch(phoneNum,phoneNoPattern))
             {
-                Console.WriteLine("Valid");
+                return "valid";
             }
             else
             {
-                Console.WriteLine("Invalid");
+                return "invalid!";
             }
         }
         /// <summary>
         /// Chceks the password.
         /// </summary>
         /// <param name="password">The password.</param>
-        public void PasswordCheck(string password) 
+        public string PasswordCheck(string password) 
         {
             var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
             ///To validate the password with all the conditions.
-            if (password.Length >= 8 && password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsDigit) && hasSymbols.IsMatch(password)) 
+            if (password.Length >= 8 && password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsDigit) && hasSymbols.IsMatch(password))
             {
-                Console.WriteLine("Valid Password");
+                return "valid";
             }
             else
             {
-                Console.WriteLine("Invalid Password");
+                return "invalid!";
             }
         }
     }

@@ -20,7 +20,7 @@ using System;
 
 namespace UserRegistrationForm
 {
-    class Program
+    public class Program
     {
         /// <summary>
         /// Defines the entry point of the application.
@@ -33,12 +33,12 @@ namespace UserRegistrationForm
             ///Takes First Name
             string takeFirstName = Console.ReadLine();
             Patterns patterns = new Patterns();
-            patterns.FirstNameCheck(takeFirstName);
+            patterns.NameCheck(takeFirstName);
             Console.WriteLine("Enter your Last Name : ");
             ///takes Last Name
             string takeLastName = Console.ReadLine();
             ///making use of same method of first name.
-            patterns.FirstNameCheck(takeLastName);
+            patterns.NameCheck(takeLastName);
             Console.WriteLine("Enter your Email Id : ");
             string takeEmail = Console.ReadLine();
             patterns.EmailCheck(takeEmail);
