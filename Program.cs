@@ -33,23 +33,23 @@ namespace UserRegistrationForm
             ///Takes First Name
             string takeFirstName = Console.ReadLine();
             Patterns patterns = new Patterns();
-            patterns.NameCheck(takeFirstName);
+            Console.WriteLine(patterns.NameCheck(takeFirstName));
             Console.WriteLine("Enter your Last Name : ");
             ///takes Last Name
             string takeLastName = Console.ReadLine();
             ///making use of same method of first name.
-            patterns.NameCheck(takeLastName);
+            Console.WriteLine(patterns.NameCheck(takeLastName));
             Console.WriteLine("Enter your Email Id : ");
             string takeEmail = Console.ReadLine();
-            patterns.EmailCheck(takeEmail);
+            Console.WriteLine( patterns.EmailCheck(takeEmail));
             ///To check for the Phone number.
             Console.WriteLine("Enter your Phone Number : ");
             string takePhoneNumber = Console.ReadLine();
-            patterns.PhoneNoCheck(takePhoneNumber);
+            Console.WriteLine( patterns.PhoneNoCheck(takePhoneNumber));
             ///To take password
             Console.WriteLine("Enter your Password : ");
             string takePassword = Console.ReadLine();
-            patterns.PasswordCheck(takePassword);
+            Console.WriteLine(patterns.PasswordCheck(takePassword));
         }
     }
 }

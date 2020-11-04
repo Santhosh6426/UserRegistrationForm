@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="UserRegistrationTest\**" />
+    <EmbeddedResource Remove="UserRegistrationTest\**" />
+    <None Remove="UserRegistrationTest\**" />
+  </ItemGroup>
+
 </Project>
